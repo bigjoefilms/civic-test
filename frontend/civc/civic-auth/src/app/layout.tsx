@@ -1,16 +1,17 @@
-import { CivicAuthProvider } from "@civic/auth/nextjs";
-import './globals.css';
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-        <html lang="en">
-            <body>
-                <CivicAuthProvider>{children}</CivicAuthProvider>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en">
+      <body>
+        {/* Wrap your app with CivicAuthProvider */}
+      
+          {children}
+        
+      </body>
+    </html>
+  );
 }
